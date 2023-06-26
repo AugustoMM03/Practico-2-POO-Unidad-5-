@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+{% block title %}Colegio San Miguel{% endblock %}
+{% block content %}
+ 
+<h2>Se ha registrado Correctamente</h2>
+
+<div class="links-container">
+    <ul class="menu-links">
+        <li><a href="{{url_for('registrarAsistencia')}}" class="menu-link">Registrar asistencia</a></li>
+        <li><a href="{{url_for('obtenerInforme')}}" class="menu-link">Mostrar Informe</a></li>
+        <li><a href="{{url_for('inicio')}}" class="menu-link">Cerrar sesión</a></li>
+    </ul>
+</div>
+
+{% endblock %}

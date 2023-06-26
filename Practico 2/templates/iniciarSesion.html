@@ -1,0 +1,36 @@
+{% extends "base_template.html" %}
+{% block title %}Iniciar Sesion{% endblock %}
+{% block content %}
+
+<h2>Iniciar Sesion</h2>
+<div class="container">
+    <div class="container">
+        <div class="myForm">
+            <form action="{{ request.path }}" method="post">
+                <div class="form-group">
+                    <label>Tipo de Usuario:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoUsuario" id="padre" value="padre" checked>
+                        <label class="form-check-label small-text" for="padre">Padre</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoUsuario" id="preceptor" value="preceptor">
+                        <label class="form-check-label small-text" for="preceptor">Preceptor</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"class="small-text">Email:</label>
+                    <input type="email" class="form-control" name="correo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"class="small-text">Contraseña:</label>
+                    <input type="password" class="form-control" name="clave" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

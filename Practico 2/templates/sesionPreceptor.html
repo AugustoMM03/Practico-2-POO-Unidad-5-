@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+{% block title %}Preceptor{% endblock %}
+{% block content %}
+
+    <body>
+        <br>
+        <br>     
+        <br>          
+        <h2>Opciones de Preceptor</h2>
+
+        <div class="links-container">
+            <ul class="menu-links">
+                <li><a href="{{url_for('registrarAsistencia')}}" class="menu-link">Registrar asistencia</a></li>
+                <li><a href="{{url_for('obtenerInforme')}}" class="menu-link">Mostrar Informe</a></li>
+                <li><a href="{{url_for('inicio')}}" class="menu-link">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </body>
+{% endblock %}
