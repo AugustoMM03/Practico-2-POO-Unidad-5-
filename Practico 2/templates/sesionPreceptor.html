@@ -1,0 +1,20 @@
+{% extends "base_template.html" %}
+{% block title %}Preceptor{% endblock %}
+{% block content %}
+    <head>
+        <title>Colegio San Miguel</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    </head>   
+    <body>     
+        <h1> Colegio San Miguel</h1>
+        <ul>
+            <li> <a href = "{{ url_for('registrarAsistencia') }}"> Registrar Asistencia </a></li><br>
+            <li> <a href = "{{ url_for('obtenerInforme') }}"> Obtener Listado </a></li><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <li> <a href="{{ url_for('inicio')}}">Cerrar Sesion</a></li>
+        </ul>
+    </body>
+{% endblock %}
